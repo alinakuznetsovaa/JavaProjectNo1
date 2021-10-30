@@ -14,9 +14,7 @@ public class MyComplex {
         this.real=real;
     }
     public boolean compareDoubles(double first, double second){
-        if (abs(first-second)<0.000001d)
-            return true;
-        else return false;
+        return abs(first - second) < 0.000001d;
 
 
     }
@@ -50,27 +48,19 @@ public class MyComplex {
     }
 
     public boolean isReal(){
-        if (compareDoubles(real,0.0d))
-            return false;
-        else return true;
+        return !compareDoubles(real, 0.0d);
     }
 
     public boolean isImaginary(){
-        if (compareDoubles(image,0.0d))
-            return false;
-        else return true;
+        return !compareDoubles(image, 0.0d);
     }
 
     public boolean equals(double real,double image){
-        if(compareDoubles(this.real,real) && compareDoubles(this.image,image))
-            return true;
-        else return false;
+        return compareDoubles(this.real, real) && compareDoubles(this.image, image);
     }
 
     public boolean equals(MyComplex complex){
-        if(compareDoubles(this.real,complex.real) && compareDoubles(this.image,complex.image))
-            return true;
-        else return false;
+        return compareDoubles(this.real, complex.real) && compareDoubles(this.image, complex.image);
     }
 
     public double magnitude(){

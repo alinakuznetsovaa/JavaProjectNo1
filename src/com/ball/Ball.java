@@ -1,5 +1,7 @@
 package com.ball;
 
+import static java.lang.Math.*;
+
 public class Ball {
     private float x;
     private float y;
@@ -11,8 +13,8 @@ public class Ball {
         this.x=x;
         this.y=y;
         this.radius=radius;
-        this.xDelta = (float)(speed * Math.cos(direction));
-        this.yDelta = (float)((-speed) * Math.sin(direction));
+        this.xDelta = (float)(speed * cos(direction));
+        this.yDelta = (float)((-speed) * sin(direction));
     }
 
     public float getX() {

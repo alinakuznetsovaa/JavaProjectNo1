@@ -13,9 +13,7 @@ public class MyPolynomial {
 
     }
     public boolean compareDoubles(double first, double second){
-        if (abs(first-second)<0.000001d)
-            return true;
-        else return false;
+        return abs(first - second) < 0.000001d;
 
 
     }

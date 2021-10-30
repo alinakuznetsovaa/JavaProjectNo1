@@ -163,8 +163,7 @@ public class Main { //класс, доступен для других паке�
         // start tests for class Container
         Container container = new Container(-50,50,100,50);
         Ball ball = new Ball(0,30,10,15,90 );
-       /*
-       System.out.println(ball);
+       /*System.out.println(ball);
         int count=0;
         while(count<5){
             ball.move();
@@ -181,10 +180,7 @@ public class Main { //класс, доступен для других паке�
             }
 
         }
-       // System.out.println(ball);
-
-
-        */
+        System.out.println(ball); */
         System.out.println(ball);
         while(container.collides(ball)){
             ball.move();

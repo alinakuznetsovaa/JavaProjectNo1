@@ -1,6 +1,5 @@
 package com.figures;
-import static java.lang.Math.PI;
-import static java.lang.Math.pow;
+import static java.lang.Math.*;
 
 public class Circle {
 

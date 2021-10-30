@@ -1,5 +1,6 @@
 package com.figures;
-import static java.lang.Math.abs;
+import static java.lang.Math.*;
+
 public class MyTriangle {
     MyPoint v1;
     MyPoint v2;
@@ -27,9 +28,7 @@ public class MyTriangle {
 
     }
     public boolean compareDoubles(double first, double second){
-        if (abs(first-second)<0.000001d)
-            return true;
-        else return false;
+        return abs(first - second) < 0.000001d;
     }
 
     public String getType(){
