@@ -17,9 +17,7 @@ public class Ball {
         this.yDelta = (float)((-speed) * sin(direction));
     }
 
-    public float getX() {
-        return x;
-    }
+    public float getX() { return x; }
 
     public void setX(float x) {
         this.x = x;

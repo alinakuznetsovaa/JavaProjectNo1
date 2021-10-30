@@ -1,7 +1,4 @@
 package com.polynomials;
-
-import java.util.Arrays;
-
 import static java.lang.Math.*;
 
 public class MyPolynomial {
@@ -14,8 +11,6 @@ public class MyPolynomial {
     }
     public boolean compareDoubles(double first, double second){
         return abs(first - second) < 0.000001d;
-
-
     }
 
     public int getDegree(){

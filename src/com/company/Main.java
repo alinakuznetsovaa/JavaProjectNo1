@@ -150,8 +150,8 @@ public class Main { //класс, доступен для других паке�
         /*Ball ball=new Ball(3.0f,4.0f,5,5,180);
         System.out.println(ball);
         Container container = new Container(1,6,6,4);
-        System.out.println(container.collidesWidth(ball));*/
-       /* System.out.println(ball.getXDelta());
+        System.out.println(container.collidesWidth(ball));
+        System.out.println(ball.getXDelta());
         System.out.println(ball.getYDelta());
         System.out.println(ball);
         ball.move();
@@ -161,9 +161,9 @@ public class Main { //класс, доступен для других паке�
 
 
         // start tests for class Container
-        Container container = new Container(-50,50,100,50);
+        /*Container container = new Container(-50,50,100,50);
         Ball ball = new Ball(0,30,10,15,90 );
-       /*System.out.println(ball);
+        System.out.println(ball);
         int count=0;
         while(count<5){
             ball.move();
@@ -180,12 +180,12 @@ public class Main { //класс, доступен для других паке�
             }
 
         }
-        System.out.println(ball); */
+        System.out.println(ball);
         System.out.println(ball);
         while(container.collides(ball)){
             ball.move();
             System.out.println(ball);
-        }
+        } */
 
 
 

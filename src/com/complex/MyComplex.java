@@ -6,8 +6,7 @@ public class MyComplex {
     private double real = 0.0d;
     private double image = 0.0d;
 
-    public MyComplex(){
-    }
+    public MyComplex(){ }
 
     public MyComplex(double real,double image){
         this.image=image;
@@ -15,8 +14,6 @@ public class MyComplex {
     }
     public boolean compareDoubles(double first, double second){
         return abs(first - second) < 0.000001d;
-
-
     }
 
     public double getReal() {
@@ -118,7 +115,6 @@ public class MyComplex {
         MyComplex newComplex=new MyComplex();
         newComplex.real = this.real - complex.real;
         newComplex.image = this.image - complex.image;
-
         return newComplex;
     }
 
@@ -128,9 +124,5 @@ public class MyComplex {
         newComplex.image=-this.image;
         return newComplex;
     }
-
-
-
-
 
 }

@@ -10,7 +10,6 @@ public class MyTriangle {
         v1=new MyPoint(x1,y1);
         v2=new MyPoint(x2,y2);
         v3=new MyPoint(x3,y3);
-
     }
 
     public MyTriangle(MyPoint v1,MyPoint v2,MyPoint v3){

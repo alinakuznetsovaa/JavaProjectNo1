@@ -19,29 +19,17 @@ public class Book {
         this.qty = qty;
     }
 
-    public String getName(){
-        return name;
-    }
+    public String getName(){ return name; }
 
-    public Author[] getAuthors(){
-        return authors.clone();
-    }
+    public Author[] getAuthors(){ return authors.clone(); }
 
-    public double getPrise() {
-        return prise;
-    }
+    public double getPrise() { return prise; }
 
-    public void setPrise(double prise) {
-        this.prise = prise;
-    }
+    public void setPrise(double prise) { this.prise = prise; }
 
-    public int getQty() {
-        return qty;
-    }
+    public int getQty() { return qty; }
 
-    public void setQty(int qty) {
-        this.qty = qty;
-    }
+    public void setQty(int qty) { this.qty = qty; }
 
     public String toString(){
         String[] str = new String[authors.length];
