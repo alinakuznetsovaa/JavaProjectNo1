@@ -1,5 +1,12 @@
 package com.books;
 
+import com.ball.Container;
+
+import java.util.Arrays;
+import java.util.Objects;
+
+import static java.lang.Math.abs;
+
 public class Book {
     private String name;
     private Author[] authors;
@@ -49,5 +56,32 @@ public class Book {
             s+=str[i];
         }
         return s;
+    }
+    public boolean compareDoubles(double first, double second){
+        return abs(first - second) < 0.000001d;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Book)) return false;
+        Book book = (Book) o;
+        return compareDoubles(prise, book.prise) &&
+                qty == book.qty &&
+                name.equals(book.name) &&
+                Arrays.equals(authors, book.authors);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = 17;
+
+        result = 31*result + qty;
+        result = 31*result + (int)prise;
+        result = 31*result + name.hashCode();
+        result = 31*result + Arrays.hashCode(authors);
+
+
+        return result;
     }
 }

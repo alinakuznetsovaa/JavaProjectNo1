@@ -1,4 +1,6 @@
 package com.figures;
+import java.util.Objects;
+
 import static java.lang.Math.*;
 
 public class MyPoint {
@@ -37,6 +39,8 @@ public class MyPoint {
         this.x=x;
         this.y=y;
     }
+
+
     public String toString(){
         return "("+x+","+y+")";
     }
@@ -51,5 +55,24 @@ public class MyPoint {
 
     public double distance(){
         return sqrt(pow(this.x,2) + pow(this.y,2));
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof MyPoint)) return false;
+        MyPoint myPoint = (MyPoint) o;
+        return x == myPoint.x &&
+                y == myPoint.y;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = 17;
+
+        result = 31*result + x;
+        result = 31*result + y;
+
+        return result;
     }
 }

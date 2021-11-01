@@ -1,4 +1,6 @@
 package com.polynomials;
+import java.util.Arrays;
+
 import static java.lang.Math.*;
 
 public class MyPolynomial {
@@ -95,5 +97,24 @@ public class MyPolynomial {
 
             }
         return poly;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof MyPolynomial)) return false;
+
+        MyPolynomial pol  = (MyPolynomial) o;
+
+        return Arrays.equals(coeffs, pol.coeffs);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = 17;
+
+        result = 31*result + Arrays.hashCode(coeffs);
+
+        return result;
     }
 }

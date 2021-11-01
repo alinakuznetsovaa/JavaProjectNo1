@@ -1,5 +1,9 @@
 package com.employees;
 
+import com.books.Book;
+
+import java.util.Objects;
+
 public class Employee {
     private int id;
     private String firstName;
@@ -49,5 +53,29 @@ public class Employee {
     }
     public String toString(){
         return "Employee[id = "+id+",name = "+this.getName()+", salary = "+salary+"]";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Employee)) return false;
+        Employee employee = (Employee) o;
+        return id==employee.id  &&
+                salary==employee.salary &&
+                firstName.equals(employee.firstName) &&
+                lastName.equals(employee.lastName);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = 17;
+
+        result = 31*result + id;
+        result = 31*result + salary;
+        result = 31*result + firstName.hashCode();
+        result = 31*result + lastName.hashCode();
+
+
+        return result;
     }
 }

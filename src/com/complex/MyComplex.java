@@ -1,5 +1,9 @@
 package com.complex;
 
+import com.ball.Container;
+
+import java.util.Objects;
+
 import static java.lang.Math.*;
 
 public class MyComplex {
@@ -53,11 +57,25 @@ public class MyComplex {
     }
 
     public boolean equals(double real,double image){
-        return compareDoubles(this.real, real) && compareDoubles(this.image, image);
+        return compareDoubles(this.real, real) &&
+                compareDoubles(this.image, image);
     }
 
+
     public boolean equals(MyComplex complex){
-        return compareDoubles(this.real, complex.real) && compareDoubles(this.image, complex.image);
+        return compareDoubles(this.real, complex.real) &&
+                compareDoubles(this.image, complex.image);
+    }
+
+
+    @Override
+    public int hashCode() {
+        int result = 17;
+
+        result = 31*result + (int)real;
+        result = 31*result + (int)image;
+
+        return result;
     }
 
     public double magnitude(){
@@ -67,10 +85,10 @@ public class MyComplex {
     public double argument(){
         double a=(double)image/real;
         if(real<0.0d && image>0.0d)
-            return PI+Math.atan(a);
+            return PI+atan(a);
         if(real<0.0d && image<0.0d)
-            return Math.atan(a)-PI;
-        return Math.atan(a);
+            return atan(a)-PI;
+        return atan(a);
     }
 
     public MyComplex add(MyComplex complex){
