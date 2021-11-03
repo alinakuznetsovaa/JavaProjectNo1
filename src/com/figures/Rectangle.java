@@ -2,6 +2,7 @@ package com.figures;
 
 import java.util.Objects;
 
+import static java.lang.Double.*;
 import static java.lang.Math.abs;
 
 public class Rectangle {
@@ -31,9 +32,6 @@ public class Rectangle {
     public String toString(){
         return "Rectangle[length = "+ length+"; width = "+width+"]";
     }
-    public boolean compareFloats(float first, float second){
-        return abs(first - second) < 0.000001f;
-    }
 
 
     @Override
@@ -41,8 +39,8 @@ public class Rectangle {
         if (this == o) return true;
         if (!(o instanceof Rectangle)) return false;
         Rectangle rectangle = (Rectangle) o;
-        return compareFloats(rectangle.length, length) &&
-                compareFloats(rectangle.width, width);
+        return (compare(rectangle.length, length) == 0) &&
+                (compare(rectangle.width, width) == 0);
     }
 
     @Override

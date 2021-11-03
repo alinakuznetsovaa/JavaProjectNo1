@@ -1,6 +1,7 @@
 package com.figures;
 import com.employees.Employee;
 
+import static java.lang.Double.*;
 import static java.lang.Math.*;
 
 public class Circle {
@@ -41,7 +42,7 @@ public class Circle {
         if (this == o) return true;
         if (!(o instanceof Circle)) return false;
         Circle circle = (Circle) o;
-        return compareDoubles(radius,circle.radius) && color.equals(circle.color);
+        return (compare(radius,circle.radius) == 0) && color.equals(circle.color);
     }
 
     @Override

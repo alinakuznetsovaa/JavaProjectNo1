@@ -2,6 +2,7 @@ package com.ball;
 
 import java.util.Objects;
 
+import static java.lang.Double.compare;
 import static java.lang.Math.*;
 
 public class Ball {
@@ -77,20 +78,19 @@ public class Ball {
         return abs(first - second) < 0.000001d;
     }
 
-    public boolean compareFloats(float first, float second){
-        return abs(first - second) < 0.000001f;
-    }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Ball)) return false;
         Ball ball = (Ball) o;
-        return compareDoubles(x,ball.x) &&
-                compareDoubles(y,ball.y) &&
-                radius==ball.radius &&
-                compareFloats(xDelta, ball.xDelta) &&
-                compareFloats(yDelta, ball.yDelta);
+
+        return (compare(x, ball.x) == 0) &&
+                (compare(y, ball.y) == 0) &&
+                radius == ball.radius &&
+                (compare(xDelta, ball.xDelta) == 0) &&
+                (compare(yDelta, ball.yDelta) == 0);
+
     }
 
     @Override

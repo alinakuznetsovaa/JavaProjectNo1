@@ -5,6 +5,7 @@ import com.ball.Container;
 import java.util.Arrays;
 import java.util.Objects;
 
+import static java.lang.Double.*;
 import static java.lang.Math.abs;
 
 public class Book {
@@ -66,7 +67,7 @@ public class Book {
         if (this == o) return true;
         if (!(o instanceof Book)) return false;
         Book book = (Book) o;
-        return compareDoubles(prise, book.prise) &&
+        return (compare(prise, book.prise) == 0) &&
                 qty == book.qty &&
                 name.equals(book.name) &&
                 Arrays.equals(authors, book.authors);

@@ -4,6 +4,7 @@ import com.ball.Container;
 
 import java.util.Objects;
 
+import static java.lang.Double.*;
 import static java.lang.Math.*;
 
 public class MyComplex {
@@ -57,14 +58,14 @@ public class MyComplex {
     }
 
     public boolean equals(double real,double image){
-        return compareDoubles(this.real, real) &&
-                compareDoubles(this.image, image);
+        return (compare(this.real, real) == 0)&&
+                (compare(this.image, image) == 0);
     }
 
 
     public boolean equals(MyComplex complex){
-        return compareDoubles(this.real, complex.real) &&
-                compareDoubles(this.image, complex.image);
+        return (compare(this.real, complex.real) == 0 )&&
+                (compare(this.image, complex.image) == 0);
     }
 
 
